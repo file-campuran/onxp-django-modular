@@ -1,0 +1,152 @@
+2024-06-01 07:46:23.511 UTC [10657] LOG:  starting PostgreSQL 15.7 on x86_64-apple-darwin23.5.0, compiled by clang version 16.0.6, 64-bit
+2024-06-01 07:46:23.529 UTC [10657] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-06-01 07:46:23.529 UTC [10657] LOG:  listening on IPv6 address "::1", port 5432
+2024-06-01 07:46:23.530 UTC [10657] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-06-01 07:46:23.545 UTC [10660] LOG:  database system was shut down at 2024-06-01 07:40:45 UTC
+2024-06-01 07:46:23.556 UTC [10657] LOG:  database system is ready to accept connections
+2024-06-01 07:46:27.017 UTC [10706] FATAL:  role "postgres" does not exist
+2024-06-01 07:46:58.944 UTC [11200] FATAL:  role "postgres" does not exist
+2024-06-01 07:47:06.931 UTC [11321] FATAL:  role "postgres" does not exist
+2024-06-01 07:47:13.329 UTC [11413] FATAL:  role "postgres" does not exist
+2024-06-01 07:47:20.849 UTC [11533] FATAL:  role "postgres" does not exist
+2024-06-01 07:47:30.051 UTC [11661] FATAL:  role "postgres" does not exist
+2024-06-01 07:48:43.098 UTC [12815] ERROR:  role "postgres" already exists
+2024-06-01 07:48:43.098 UTC [12815] STATEMENT:  CREATE ROLE postgres WITH SUPERUSER LOGIN PASSWORD 'password';
+2024-06-01 07:48:50.197 UTC [12942] FATAL:  lock file "postmaster.pid" already exists
+2024-06-01 07:48:50.197 UTC [12942] HINT:  Is another postmaster (PID 10657) running in data directory "/Users/vianziro/Documents/learning/belajar/onxp-belajar-django/belajad-django-modular/.nix-shell/db"?
+2024-06-01 07:49:01.364 UTC [13103] ERROR:  role "postgres" already exists
+2024-06-01 07:49:01.364 UTC [13103] STATEMENT:  CREATE ROLE postgres WITH SUPERUSER LOGIN PASSWORD 'password';
+2024-06-01 07:49:05.517 UTC [13170] FATAL:  database "django_modular" does not exist
+2024-06-01 07:51:23.554 UTC [10658] LOG:  checkpoint starting: time
+2024-06-01 07:53:01.853 UTC [10658] LOG:  checkpoint complete: wrote 975 buffers (6.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=98.283 s, sync=0.007 s, total=98.301 s; sync files=315, longest=0.001 s, average=0.001 s; distance=4503 kB, estimate=4503 kB
+2024-06-01 08:32:37.082 UTC [52984] FATAL:  database "macbookpro" does not exist
+2024-06-01 08:32:37.191 UTC [53017] ERROR:  role "postgres" already exists
+2024-06-01 08:32:37.191 UTC [53017] STATEMENT:  CREATE ROLE postgres NOSUPERUSER NOCREATEDB NOCREATEROLE INHERIT LOGIN;
+2024-06-01 08:32:37.583 UTC [53029] ERROR:  database "django_modular" already exists
+2024-06-01 08:32:37.583 UTC [53029] STATEMENT:  CREATE DATABASE django_modular
+2024-06-01 08:36:23.854 UTC [10658] LOG:  checkpoint starting: time
+2024-06-01 08:38:09.880 UTC [10658] LOG:  checkpoint complete: wrote 1049 buffers (6.4%); 1 WAL file(s) added, 0 removed, 0 recycled; write=105.957 s, sync=0.015 s, total=106.027 s; sync files=402, longest=0.001 s, average=0.001 s; distance=4773 kB, estimate=4773 kB
+2024-06-01 17:12:38.832 UTC [10658] LOG:  checkpoint starting: time
+2024-06-01 17:12:41.401 UTC [10658] LOG:  checkpoint complete: wrote 25 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.553 s, sync=0.002 s, total=2.570 s; sync files=11, longest=0.001 s, average=0.001 s; distance=26 kB, estimate=4298 kB
+2024-06-01 17:37:38.405 UTC [10658] LOG:  checkpoint starting: time
+2024-06-01 17:37:45.055 UTC [10658] LOG:  checkpoint complete: wrote 66 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.640 s, sync=0.001 s, total=6.652 s; sync files=27, longest=0.001 s, average=0.001 s; distance=352 kB, estimate=3904 kB
+2024-06-01 17:42:38.057 UTC [10658] LOG:  checkpoint starting: time
+2024-06-01 17:42:40.411 UTC [10658] LOG:  checkpoint complete: wrote 24 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.342 s, sync=0.001 s, total=2.355 s; sync files=7, longest=0.001 s, average=0.001 s; distance=166 kB, estimate=3530 kB
+2024-06-01 17:44:03.683 UTC [74037] ERROR:  syntax error at or near ":" at character 189
+2024-06-01 17:44:03.683 UTC [74037] STATEMENT:  
+	                 CREATE TABLE IF NOT EXISTS book (
+	                     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+	                     title VARCHAR(255),
+	                     Author: Firstname Lastname(255),
+	                     description TEXT);
+2024-06-01 17:44:36.535 UTC [74703] ERROR:  syntax error at or near ":" at character 189
+2024-06-01 17:44:36.535 UTC [74703] STATEMENT:  
+	                 CREATE TABLE IF NOT EXISTS book (
+	                     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+	                     title VARCHAR(255),
+	                     author: VARCHAR(255),
+	                     description TEXT);
+2024-06-01 17:45:03.151 UTC [75217] ERROR:  syntax error at or near "(" at character 237
+2024-06-01 17:45:03.151 UTC [75217] STATEMENT:  
+	                 CREATE TABLE IF NOT EXISTS book (
+	                     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+	                     title VARCHAR(255),
+	                     author VARCHAR(255),
+	                     description (TEXT);
+2024-06-01 17:47:38.415 UTC [10658] LOG:  checkpoint starting: time
+2024-06-01 17:47:51.173 UTC [10658] LOG:  checkpoint complete: wrote 126 buffers (0.8%); 0 WAL file(s) added, 0 removed, 0 recycled; write=12.736 s, sync=0.004 s, total=12.760 s; sync files=56, longest=0.001 s, average=0.001 s; distance=753 kB, estimate=3252 kB
+2024-06-01 17:52:38.193 UTC [10658] LOG:  checkpoint starting: time
+2024-06-01 17:52:42.288 UTC [10658] LOG:  checkpoint complete: wrote 41 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.079 s, sync=0.004 s, total=4.095 s; sync files=35, longest=0.001 s, average=0.001 s; distance=157 kB, estimate=2943 kB
+2024-06-02 17:49:07.582 UTC [10658] LOG:  checkpoint starting: time
+2024-06-02 17:49:08.020 UTC [10658] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.424 s, sync=0.001 s, total=0.439 s; sync files=4, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=2648 kB
+2024-06-03 07:21:05.821 UTC [10657] LOG:  received fast shutdown request
+2024-06-03 07:21:05.826 UTC [10657] LOG:  aborting any active transactions
+2024-06-03 07:21:05.841 UTC [64532] FATAL:  terminating connection due to administrator command
+2024-06-03 07:21:05.842 UTC [83048] FATAL:  terminating connection due to administrator command
+2024-06-03 07:21:05.856 UTC [10657] LOG:  background worker "logical replication launcher" (PID 10663) exited with exit code 1
+2024-06-03 07:21:05.868 UTC [10658] LOG:  shutting down
+2024-06-03 07:21:05.870 UTC [10658] LOG:  checkpoint starting: shutdown immediate
+2024-06-03 07:21:05.889 UTC [10658] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.010 s, sync=0.001 s, total=0.021 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=2383 kB
+2024-06-03 07:21:05.906 UTC [10657] LOG:  database system is shut down
+2024-06-03 16:15:45.289 UTC [65848] LOG:  starting PostgreSQL 15.7 on x86_64-apple-darwin23.5.0, compiled by clang version 16.0.6, 64-bit
+2024-06-03 16:15:45.292 UTC [65848] LOG:  listening on IPv6 address "::1", port 5432
+2024-06-03 16:15:45.292 UTC [65848] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-06-03 16:15:45.292 UTC [65848] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-06-03 16:15:45.304 UTC [65851] LOG:  database system was shut down at 2024-06-03 07:21:05 UTC
+2024-06-03 16:15:45.314 UTC [65848] LOG:  database system is ready to accept connections
+2024-06-03 16:20:45.301 UTC [65849] LOG:  checkpoint starting: time
+2024-06-03 16:20:45.412 UTC [65849] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.104 s, sync=0.001 s, total=0.112 s; sync files=3, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB
+2024-06-03 17:29:02.816 UTC [14864] ERROR:  unterminated quoted identifier at or near ""
+	            INSERT into book
+	                (title, author, description)
+	            values ('title', 'author', 'description')
+	            RETURNING *
+	            " at character 1
+2024-06-03 17:29:02.816 UTC [14864] STATEMENT:  "
+	            INSERT into book
+	                (title, author, description)
+	            values ('title', 'author', 'description')
+	            RETURNING *
+	            
+2024-06-03 17:29:55.125 UTC [65849] LOG:  checkpoint starting: time
+2024-06-03 17:29:55.437 UTC [65849] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.306 s, sync=0.001 s, total=0.312 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4 kB, estimate=4 kB
+2024-06-03 17:34:55.438 UTC [65849] LOG:  checkpoint starting: time
+2024-06-03 17:34:55.655 UTC [65849] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.208 s, sync=0.001 s, total=0.217 s; sync files=3, longest=0.001 s, average=0.001 s; distance=1 kB, estimate=4 kB
+2024-06-07 17:17:06.191 UTC [65849] LOG:  checkpoint starting: time
+2024-06-07 17:17:06.409 UTC [65849] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.207 s, sync=0.001 s, total=0.222 s; sync files=3, longest=0.001 s, average=0.001 s; distance=1 kB, estimate=3 kB
+2024-06-08 03:47:42.508 UTC [18647] ERROR:  role "postgres" already exists
+2024-06-08 03:47:42.508 UTC [18647] STATEMENT:  CREATE ROLE postgres NOSUPERUSER NOCREATEDB NOCREATEROLE INHERIT LOGIN;
+2024-06-08 03:47:42.580 UTC [18652] ERROR:  database "macbookpro" already exists
+2024-06-08 03:47:42.580 UTC [18652] STATEMENT:  CREATE DATABASE macbookpro OWNER macbookpro;
+2024-06-08 03:51:52.604 UTC [65849] LOG:  checkpoint starting: time
+2024-06-08 03:53:27.806 UTC [65849] LOG:  checkpoint complete: wrote 939 buffers (5.7%); 0 WAL file(s) added, 0 removed, 1 recycled; write=95.183 s, sync=0.009 s, total=95.205 s; sync files=305, longest=0.002 s, average=0.001 s; distance=4324 kB, estimate=4324 kB
+2024-06-08 04:02:43.142 UTC [32303] FATAL:  database "status" does not exist
+2024-06-09 12:37:01.664 UTC [65848] LOG:  received fast shutdown request
+2024-06-09 12:37:01.672 UTC [65848] LOG:  aborting any active transactions
+2024-06-09 12:37:01.691 UTC [65848] LOG:  background worker "logical replication launcher" (PID 65854) exited with exit code 1
+2024-06-09 12:37:01.721 UTC [65849] LOG:  shutting down
+2024-06-09 12:37:01.722 UTC [65849] LOG:  checkpoint starting: shutdown immediate
+2024-06-09 12:37:01.728 UTC [65849] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.001 s, total=0.007 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=3892 kB
+2024-06-09 12:37:01.732 UTC [65848] LOG:  database system is shut down
+2024-06-13 12:54:24.731 WIB [3570] LOG:  starting PostgreSQL 15.7 on aarch64-apple-darwin22.6.0, compiled by clang version 16.0.6, 64-bit
+2024-06-13 12:54:24.733 WIB [3570] LOG:  listening on IPv6 address "::1", port 5432
+2024-06-13 12:54:24.733 WIB [3570] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-06-13 12:54:24.733 WIB [3570] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-06-13 12:54:24.735 WIB [3573] LOG:  database system was shut down at 2024-06-13 12:54:18 WIB
+2024-06-13 12:54:24.736 WIB [3570] LOG:  database system is ready to accept connections
+2024-06-13 12:54:27.789 WIB [3587] FATAL:  role "postgres" does not exist
+2024-06-13 12:55:46.308 WIB [3752] FATAL:  role "postgres" does not exist
+2024-06-13 12:55:46.311 WIB [3754] FATAL:  role "postgres" does not exist
+2024-06-13 12:55:50.276 WIB [3764] FATAL:  role "postgres" does not exist
+2024-06-13 12:57:32.712 WIB [3951] FATAL:  role "postgres" does not exist
+2024-06-13 12:57:32.717 WIB [3953] FATAL:  role "postgres" does not exist
+2024-06-13 12:58:05.316 WIB [4011] FATAL:  role "postgres" does not exist
+2024-06-13 12:58:05.321 WIB [4013] FATAL:  role "postgres" does not exist
+2024-06-13 12:59:24.737 WIB [3571] LOG:  checkpoint starting: time
+2024-06-13 12:59:24.740 WIB [3571] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.003 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB
+2024-06-13 12:59:51.761 WIB [4219] FATAL:  role "postgres" does not exist
+2024-06-13 13:00:43.100 WIB [4321] FATAL:  role "postgres" does not exist
+2024-06-13 16:05:56.067 WIB [16293] FATAL:  lock file "postmaster.pid" already exists
+2024-06-13 16:05:56.067 WIB [16293] HINT:  Is another postmaster (PID 3570) running in data directory "/Users/sepyankristanto/Documents/DataBelajar/onxp-belajar-django/belajad-django-modular/.nix-shell/db"?
+2024-06-13 16:06:15.652 WIB [16329] FATAL:  lock file "postmaster.pid" already exists
+2024-06-13 16:06:15.652 WIB [16329] HINT:  Is another postmaster (PID 3570) running in data directory "/Users/sepyankristanto/Documents/DataBelajar/onxp-belajar-django/belajad-django-modular/.nix-shell/db"?
+2024-06-13 16:08:16.749 WIB [16626] FATAL:  role "postgres" does not exist
+2024-06-13 16:08:30.876 WIB [3570] LOG:  received fast shutdown request
+2024-06-13 16:08:30.876 WIB [3570] LOG:  aborting any active transactions
+2024-06-13 16:08:30.878 WIB [3570] LOG:  background worker "logical replication launcher" (PID 3576) exited with exit code 1
+2024-06-13 16:08:30.879 WIB [3571] LOG:  shutting down
+2024-06-13 16:08:30.879 WIB [3571] LOG:  checkpoint starting: shutdown immediate
+2024-06-13 16:08:30.881 WIB [3571] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.003 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=0 kB
+2024-06-13 16:08:30.883 WIB [3570] LOG:  database system is shut down
+2024-06-13 16:09:43.965 WIB [16922] LOG:  starting PostgreSQL 15.7 on aarch64-apple-darwin23.4.0, compiled by clang version 16.0.6, 64-bit
+2024-06-13 16:09:43.967 WIB [16922] LOG:  listening on IPv6 address "::1", port 5432
+2024-06-13 16:09:43.967 WIB [16922] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-06-13 16:09:43.967 WIB [16922] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-06-13 16:09:43.972 WIB [16925] LOG:  database system was shut down at 2024-06-13 16:08:30 WIB
+2024-06-13 16:09:43.975 WIB [16922] LOG:  database system is ready to accept connections
+2024-06-13 16:09:46.420 WIB [16933] FATAL:  role "postgres" does not exist
+2024-06-13 16:10:32.517 WIB [17426] FATAL:  role "postgres" does not exist
+2024-06-13 16:10:43.643 WIB [17705] FATAL:  role "root" does not exist
+2024-06-13 16:14:43.936 WIB [16923] LOG:  checkpoint starting: time
+2024-06-13 16:14:43.949 WIB [16923] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.005 s, sync=0.001 s, total=0.014 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB
+2024-06-13 18:35:17.241 WIB [92407] FATAL:  role "postgres" does not exist

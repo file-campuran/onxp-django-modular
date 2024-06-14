@@ -1,0 +1,36 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/htmx.org@1.9.12" integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'app_landing/tailwind.css' %}">
+
+ <style>
+
+  </style>
+  <!-- <link rel="stylesheet" href="{% static 'app_landing/style.css' %}"> -->
+
+
+  <title>Halaman Landing - htmx</title>
+</head>
+<body>
+
+<h1>Selamat Datang di Landing Pages</h1>
+
+
+<button class="btn btn-primary" hx-get= ="/informasi" hx-target="#content">Informasi</button>
+<button class="btn btn-secondary" hx-get="/profil" hx-target="#content">Profil</button>
+<button class="btn btn-success" hx-get="/visi-misi" hx-target="#content">Visi Misi</button>
+
+<div id="content" >
+  <p>Loading...</p>
+
+</div>
+
+</body>
+</html>
+

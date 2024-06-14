@@ -24,7 +24,7 @@ pkgs.mkShell {
     python311Packages.pip
     pkgs.pdm
     redis
-    pkgs.postgresql
+    postgresql
   ];
 
   shellHook = ''
@@ -39,17 +39,16 @@ pkgs.mkShell {
     export PGPASSWORD=password
 
     # Setup PostgreSQL
-    mkdir $NIX_SHELL_DIR
-    
-   trap \
+    mkdir -p $NIX_SHELL_DIR
+
+    trap \
     "
       pg_ctl -D $PGDATA stop
       pkill redis-server
     " \
     EXIT
 
-    if ! test -d $PGDATA
-    then
+    if [ ! -d "$PGDATA" ]; then
       initdb -D $PGDATA --no-locale --encoding=UTF8
     fi
 
@@ -72,11 +71,17 @@ pkgs.mkShell {
       start
 
     echo "Setup database.. To access DB: psql -U $PGUSER -d postgres"
-    if ! psql -U $(whoami) -tAc "SELECT 1 FROM pg_database WHERE datname='django_sql'" | grep -q 1; then
-      createuser -U $(whoami)
-      psql -U $(whoami) -d postgres -c "CREATE DATABASE $(whoami) OWNER $(whoami);" || true
-      psql -U $(whoami) -d postgres -c "ALTER ROLE $PGUSER SUPERUSER;"
-      psql -U "$PGUSER" -d postgres -c "CREATE DATABASE django_sql" || true
+
+    # Create the postgres role if it doesn't exist
+    if ! psql -U "$(whoami)" -tAc "SELECT 1 FROM pg_roles WHERE rolname='postgres'" | grep -q 1; then
+      createuser -s -r postgres
+    fi
+
+    if ! psql -U "$PGUSER" -tAc "SELECT 1 FROM pg_database WHERE datname='django_modular'" | grep -q 1; then
+      createuser -U "$PGUSER"
+      psql -U "$PGUSER" -d postgres -c "CREATE DATABASE $PGUSER OWNER $PGUSER;" || true
+      psql -U "$PGUSER" -d postgres -c "ALTER ROLE $PGUSER SUPERUSER;"
+      psql -U "$PGUSER" -d postgres -c "CREATE DATABASE django_modular" || true
     fi
 
     echo "Run redis.. See log on $NIX_SHELL_DIR/redis.log"

@@ -5,10 +5,22 @@ description = "Belajar Django Modular"
 authors = [
     {name = "vianziro", email = "vianziro@gmail.com"},
 ]
-dependencies = []
+dependencies = [
+    "django==5.0.6",
+    "ruff==0.4.4",
+    "django-environ==0.11.2",
+    "locust==2.15.1",
+    "psycopg-binary==3.1.19",
+    "psycopg2-binary==2.9.9",
+]
 requires-python = ">=3.11"
 readme = "README.md"
 license = {text = "MIT"}
+
+
+[tool.pdm.scripts]
+dev = "pdm run src/manage.py runserver"
+tw-watch = " npx tailwindcss -i ./app.css -o ./src/app_landing/static/app_landing/tailwind.css --watch --minify"
 
 [build-system]
 requires = ["pdm-backend"]
